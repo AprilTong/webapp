@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 响应式布局 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+    <!-- 格式识别 -->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="root" class="container">
+        <!--中间层控制导航栏-->
+        <div class="m-artical-action">
+            <div class="article-action-mid" id="action_mid"></div>
+        </div>
+        <!-- 上面导航栏-->
+        <div id="top_nav" class="top-nav" style="display: none">
+            <div class="icon-back"></div>
+            <div class="nav-title">返回书架</div>
+        </div>
+        <!-- <div id="fiction_chapter_title"></div> -->
+        <!-- 主要阅读内容-->
+        <div id="fiction_container" class="m-read-content">
+        </div>
+    </div>
+    <!-- 控制章节的按钮-->
+    <div class="m-button-bar">
+        <ul class="u-tab">
+            <li id="prev_button">上一章</li>
+            <li id="next_button">下一章</li>
+        </ul>
+    </div>
+    <!--操作面板背景-->
+    <div class="nav-pannel-bk font-container" style="display: none"></div>
+    <!--控制字体及背景颜色部分-->
+    <div class="nav-pannel font-container" style="display: none">
+        <div class="child-mod">
+            <span>字号</span>
+            <button id="large-font" class="font-size-button">大</button>
+            <button id="small-font" class="font-size-button">小</button>
+        </div>
+        <div class="child-mod">
+            <span>背景</span>
+            <div class="bk-container bg1">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bg2">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bg3">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bg4">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bg5">
+                <div class="bk-container-current"></div>
+            </div>
+        </div>
+    </div>
+    <!--底部导航栏-->
+    <!--  <div class="bottom-nav-bk bottom_nav"></div> -->
+    <div class="bottom-nav" id="bottom_nav" style="display: none">
+        <div class="item menu-button" id="menu_button">
+            <div class="item-wrap">
+                <div class="icon-menu"></div>
+                <div class="icon-text">目录</div>
+            </div>
+        </div>
+        <div class="item" id="font-button">
+            <div class="item-wrap">
+                <div class="icon-ft"></div>
+                <div class="icon-text">字体</div>
+            </div>
+        </div>
+        <div class="item" id="night-button" style="display:none">
+            <div class="item-wrap">
+                <div class="icon-nt"></div>
+                <div class="icon-text">夜间</div>
+            </div>
+        </div>
+        <div class="item" id="daytime-button">
+            <div class="item-wrap">
+                <div class="icon-daytime"></div>
+                <div class="icon-text">白天</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- zeptojs适用于移动端的框架，和jq使用大体类似轻量高速 -->
+    <script src="lib/zepto.min.js"></script>
+    <script>
+    window.jQuery = $;
+    </script>
+    <!-- 解码 -->
+    <script src="js/jquery.base64.js"></script>
+    <!-- 跨域 -->
+    <script src="js/jquery.jsonp.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
